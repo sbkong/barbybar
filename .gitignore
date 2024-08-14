@@ -39,3 +39,8 @@ out/
 
 ### Logs ###
 logs
+
+### Secret files ###
+/src/test/java/com/au4a/barbybar/config/JasyptConfigAESTest.java
+/src/main/resources/application-secret.properties
+/src/main/resources/db-ddl.txt
