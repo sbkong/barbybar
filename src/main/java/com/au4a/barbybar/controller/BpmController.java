@@ -14,6 +14,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+/**
+ * The type Bpm controller.
+ */
 @RestController
 @RequestMapping("/audio")
 @RequiredArgsConstructor
@@ -21,6 +24,14 @@ public class BpmController {
 
     final private BpmService bpmService;
 
+    /**
+     * Upload audio response entity.
+     *
+     * @param file the file
+     * @return the response entity
+     * @throws IOException the io exception
+     * @throws UnsupportedAudioFileException the unsupported audio file exception
+     */
     @PostMapping("/upload")
     public ResponseEntity<AudioFile> uploadAudio(@RequestParam("file") MultipartFile file)
         throws IOException, UnsupportedAudioFileException {
